@@ -9,13 +9,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --accent: #C7A491;
-    --peach: #C7CDBF;
-    --wolf: #C7CDBF;
-    --sage: #C7CDBF;
-    --ink: #3A3C34;
-    --ink-soft: #6f7566;
-    --paper: #FBF6F4;
+    --sand: #BFCFBB;
+    --french-blue: #8EA58C;
+    --sage: #738A6E;
+    --tag-bg: #5C6F57;
+    --accent: #8EA58C;
+    --peach: #BFCFBB;
+    --wolf: #5C6F57;
+    --ink: #2E3129;
+    --ink-soft: #5B6156;
+    --paper: #F6F8F2;
     --radius: 18px;
   }
 
@@ -63,7 +66,7 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--ink);
-    background: var(--sage);
+    background: var(--accent);
     padding: 6px 14px;
     border-radius: 999px;
     margin-bottom: 22px;
@@ -81,7 +84,7 @@
     font-weight: 700;
     font-family: 'Fraunces', serif;
     font-variation-settings: "opsz" 40;
-    color: #7A5A47;
+    color: #4F6357;
     -webkit-text-stroke: 0;
   }
 
@@ -229,7 +232,7 @@
     font-weight: 700;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: var(--ink);
+    color: var(--paper);
     background: var(--wolf);
     padding: 4px 10px;
     border-radius: 999px;
@@ -308,7 +311,7 @@
   }
   .copy-btn:hover{ background: #37403f; }
   .copy-btn:active{ transform: scale(0.97); }
-  .copy-btn.copied{ background: var(--sage); color: var(--ink); }
+  .copy-btn.copied{ background: var(--tag-bg); color: var(--paper); }
 
   .copy-hint{
     font-size: 12.5px;
@@ -338,6 +341,7 @@
   .about-text{ flex: 1; min-width: 220px; }
   .about .card-tag{
     background: var(--accent);
+    color: var(--ink);
   }
   .about h2{
     font-size: 24px;
@@ -557,6 +561,10 @@ Warm, curious, and unhurried in the investigation phase, especially for complex 
         </div>
       </summary>
       <div class="card-body">
+        <div class="note-box">
+          <span class="note-icon">i</span>
+          <span>Best used in a normal typed or mic-to-text chat — not live voice mode. Voice mode can lose track of longer instructions like this one.</span>
+        </div>
         <div class="copy-row">
           <button class="copy-btn" data-target="prompt-1">Copy prompt</button>
           <span class="copy-hint">Copies the whole prompt — paste it into your AI chat.</span>
