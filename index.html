@@ -17,6 +17,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+  // Google Analytics is NOT loaded here. It only loads after the person
+  // clicks "Accept" on the cookie banner below (see the script at the
+  // bottom of the page), or if they already accepted on a previous visit.
+  window.GA_MEASUREMENT_ID = 'G-R1K0X3KZR9';
+</script>
 <style>
   :root{
     --sand: #BFCFBB;
@@ -887,6 +893,51 @@
     color: var(--ink);
   }
 
+  /* ---------- cookie banner ---------- */
+  .cookie-banner{
+    display: none;
+    position: fixed;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    z-index: 40;
+    background: var(--ink);
+    color: var(--paper);
+    border-radius: 16px;
+    padding: 16px 18px;
+    box-shadow: 0 12px 34px -12px rgba(0,0,0,0.45);
+    max-width: 620px;
+    margin: 0 auto;
+  }
+  .cookie-banner.active{ display: block; }
+  .cookie-banner-inner{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .cookie-banner p{
+    margin: 0;
+    font-size: 13.5px;
+    line-height: 1.5;
+    flex: 1;
+    min-width: 200px;
+  }
+  .cookie-accept{
+    appearance: none;
+    border: none;
+    background: var(--accent);
+    color: var(--ink);
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 13.5px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  .cookie-accept:hover{ opacity: 0.9; }
+
   /* ---------- footer ---------- */
   footer{
     text-align: center;
@@ -1724,6 +1775,13 @@ This prompt is written for an AI assistant to execute directly. It must be clear
     </div>
   </div>
 
+<div class="cookie-banner" id="cookie-banner">
+  <div class="cookie-banner-inner">
+    <p>This site uses Google Analytics to see which prompts people find useful. It's off by default — nothing is tracked unless you click Accept.</p>
+    <button class="cookie-accept" id="cookie-accept">Accept</button>
+  </div>
+</div>
+
 <script>
   document.querySelectorAll('.copy-btn').forEach(function(btn){
     btn.addEventListener('click', function(){
@@ -1738,8 +1796,52 @@ This prompt is written for an AI assistant to execute directly. It must be clear
           btn.classList.remove('copied');
         }, 1800);
       });
+      // Track which prompt got copied, only fires if GA has been loaded (i.e. consent given)
+      if (window.gtag){
+        var card = btn.closest('.card');
+        var promptName = card ? card.querySelector('h3').textContent : target.id;
+        window.gtag('event', 'copy_prompt', { prompt_name: promptName });
+      }
     });
   });
+
+  // ---------- Cookie consent + Google Analytics (off until accepted) ----------
+  (function(){
+    function getCookie(name){
+      var match = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
+      return match ? match.pop() : '';
+    }
+    function setCookie(name, value, days){
+      var expires = new Date(Date.now() + days*24*60*60*1000).toUTCString();
+      document.cookie = name + '=' + value + '; expires=' + expires + '; path=/; SameSite=Lax';
+    }
+    function loadGA(){
+      if (window.gtag) return; // already loaded
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.GA_MEASUREMENT_ID;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function(){ window.dataLayer.push(arguments); };
+      window.gtag('js', new Date());
+      window.gtag('config', window.GA_MEASUREMENT_ID);
+    }
+
+    var banner = document.getElementById('cookie-banner');
+    var acceptBtn = document.getElementById('cookie-accept');
+
+    if (getCookie('ga_consent') === 'granted'){
+      loadGA();
+    } else {
+      banner.classList.add('active');
+    }
+
+    acceptBtn.addEventListener('click', function(){
+      setCookie('ga_consent', 'granted', 365);
+      loadGA();
+      banner.classList.remove('active');
+    });
+  })();
 
   // "Got an idea for a prompt?" box — opens the visitor's email app with
   // a message pre-addressed and pre-filled, ready for them to send.
