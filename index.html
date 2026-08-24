@@ -187,6 +187,11 @@
     margin-top: 22px;
     padding-top: 22px;
     border-top: 1px solid #eae3da;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .video-link:hover .video-link-title{
+    color: var(--accent);
   }
   .video-link .play-icon{
     flex-shrink: 0;
@@ -200,7 +205,8 @@
     justify-content: center;
     font-size: 15px;
   }
-  .video-link a{
+  .video-link-title{
+    display: inline-block;
     color: var(--ink);
     font-weight: 700;
     font-size: 14.5px;
@@ -1171,13 +1177,13 @@
         <p>Open your AI chat tool, paste it into the text box, and hit send.</p>
       </div>
     </div>
-    <div class="video-link">
+    <a class="video-link" href="https://youtu.be/U_LiVP4aCwY" target="_blank" rel="noopener">
       <span class="play-icon">▶</span>
       <div>
-        <a href="https://youtu.be/U_LiVP4aCwY" target="_blank" rel="noopener">Watch how it works (video)</a>
+        <span class="video-link-title">Watch how it works (video)</span>
         <p>See me copy a prompt, paste it into an AI chat, and answer the first few questions — start to finish.</p>
       </div>
-    </div>
+    </a>
   </section>
 
   <section id="library">
