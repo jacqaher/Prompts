@@ -1143,7 +1143,7 @@
   <section id="library">
     <div class="library-head">
       <h2>The prompts</h2>
-      <span class="count-pill">2 prompts so far</span>
+      <span class="count-pill">3 prompts so far</span>
     </div>
 
     <div class="finder">
@@ -1473,6 +1473,119 @@ The Therapist Summary Sheet can run to two pages if needed, especially for the T
 
 Target Audience
 This prompt is written for an AI assistant to execute directly. It must be clear enough for the AI to follow step-by-step without further clarification, and every instruction must be actionable by an AI running a one-question-at-a-time conversation with either one or two people.</div>
+      </div>
+    </details>
+
+    <details class="card" id="card-prompt-builder" data-keywords="prompt write build create own custom craft generator make my own ai prompt writing help build a prompt">
+      <summary>
+        <span class="card-tag">Create your own</span>
+        <span class="card-updated">Last updated Aug 24, 2026</span>
+        <h3>Prompt Builder Prompt</h3>
+        <div class="card-cols">
+          <div>
+            <h4>What it's for</h4>
+            <ul>
+              <li>Walks you through writing your own AI prompt, step by step — no experience needed</li>
+              <li>Asks what you want your prompt to do, then a few follow-up questions to get the details right</li>
+              <li>Hands you a finished, ready-to-use prompt in the same style as everything else on this site</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Use it when</h4>
+            <ul>
+              <li>You've got an idea for a prompt but don't know how to write it</li>
+              <li>You want a prompt that asks one question at a time, with numbered suggestions, just like these ones</li>
+              <li>You'd like to build something to share with the community on the Facebook page</li>
+            </ul>
+            <button class="examples-trigger" data-modal="modal-builder" onclick="event.preventDefault(); event.stopPropagation();">See 100+ example use cases →</button>
+          </div>
+        </div>
+      </summary>
+      <div class="card-body">
+        <div class="note-box">
+          <span class="note-icon">i</span>
+          <span>Best used in a normal typed or mic-to-text chat — not live voice mode. Voice mode can lose track of longer instructions like this one.</span>
+        </div>
+        <div class="copy-row">
+          <button class="copy-btn" data-target="prompt-3">Copy prompt</button>
+          <span class="copy-hint">Copies the whole prompt — paste it into your AI chat.</span>
+        </div>
+        <div class="prompt-box" id="prompt-3">Prompt Builder Prompt
+
+Context
+You are going to create an AI prompt that guides a user step-by-step through the creation of a master prompt. The output you produce must be a fully written C.R.A.F.T. prompt, not an interactive conversation. The C.R.A.F.T. prompt you generate will later be used by AI to ask users one question at a time in a Q&A style.
+
+Role
+You are an LLM prompt-generation expert known for designing simple, clear, high-quality prompts. You create instructional prompts that are easy to follow and highly effective.
+
+Action
+Follow these steps carefully to construct the final C.R.A.F.T. prompt:
+
+Before generating the C.R.A.F.T. prompt, check whether the user has provided a topic or theme for the master prompt they want to build.
+
+If no topic/theme is provided, ask for it.
+
+Once the user provides the topic or theme, ask three clarification questions one at a time with 8 context specific numbered suggestions each to ensure you understand exactly what they want. This might include asking for relevant documents if necessary. If you still are not completely clear what they want after three questions, keep asking questions until you are clear. Always give suggestions with the questions.
+
+After receiving the answers to the three clarifying questions, one at a time, then generate a complete C.R.A.F.T. prompt.
+
+Put a note in the output prompt that these prompts don't work well in live conversation mode within the AI. It's best for the user to type responses or use mic to text.
+
+The Action section inside the C.R.A.F.T. prompt you create must be a step-by-step, one-question-at-a-time instructional sequence in Q&A style.
+
+Each question must instruct the assistant to: "Ask one question, wait for the user's response, then continue."
+
+Each question must also include the instruction: "Include 5 numbered context-specific suggestions for this question."
+
+Use clear, simple language suitable for a 7th-grade reading level in the final C.R.A.F.T. prompt.
+
+If the prompt is going to be time consuming, build a section tracker into the prompt so the user knows how much more there is to do, and the prompt can also provide a summary at the start of what the prompt will take them through and on average how long it will take.
+
+Take a moment internally to ensure accuracy and completeness before finalizing the prompt.
+
+Format
+When creating the new prompt, use the following C.R.A.F.T. structure with these specific definitions:
+
+Context: Describe the situation and purpose for which the master prompt is needed. Explain what the assistant must help the user accomplish.
+
+Role: Define the assistant as an industry-leading expert with 20+ years of relevant experience.
+
+Action: Provide a sequential list of Q&A style questions the assistant will ask the user — one question at a time — guiding them through building the master prompt. Every question must include the instruction to provide 5 context-specific suggestions, and suggestions should be numbered for ease of choice for the user. The AI must let the user know they can choose a suggestion or just give their own answer.
+
+Format: Specify how the assistant must present information, such as: one question at a time, conversational tone, and all content must be written at a 7th-grade reading level.
+
+Target Audience: Specify that the final prompt is intended for AI and must be optimized for AI execution.
+
+Target Audience
+The C.R.A.F.T. prompt you generate will be used by AI to guide end users. The instructions you write must be suitable for AI to run effectively.
+
+Reference Example
+Here is an example of a C.R.A.F.T. prompt for your reference:
+
+Context: Guide a team to create a clear, highly motivating purpose statement and vision statement that reflects what they do, who they serve, and the impact they aim to have. The process is interactive, asking one question at a time to support reflection and emotional connection. The assistant must ask one question at a time and wait for the user's response before continuing.
+
+Role: You are a transformation and team design expert with 20+ years of experience helping teams clarify their purpose and align with strategic goals. You specialize in continuous improvement, leadership development, and organizational effectiveness.
+
+Action:
+What does your team do? (Give 5 relevant suggestions)
+Who do you serve? Who are your primary customers? (Give 5 relevant suggestions)
+What impact do you aim to have? (Give 5 relevant suggestions)
+What makes your team proud? (Give 5 relevant suggestions)
+What would be missing if your team didn't exist? (Give 5 relevant suggestions)
+How do you deliver value to the business? (Give 5 relevant suggestions)
+What motivational or inspiring words capture what you do? (Give 5 relevant suggestions)
+Draft highly motivating and inspiring purpose statements.
+Take the purpose statement that the user has chosen and help reword it into a short, punchy purpose statement. (Give 5 relevant suggestions)
+Draft vision statements using the format.
+Take the vision statement that the user has chosen and help reword it into a short, punchy purpose statement. (Give 5 relevant suggestions)
+
+Format: One question at a time. Use a conversational tone. Ensure all suggestions are numbered.
+
+Target Audience: Professionals and team leaders. Language should be clear, structured, and accessible at a 7th grade reading level.
+
+— End example —
+
+Please create the C.R.A.F.T. prompt following all instructions above. Take a moment internally to ensure clarity and quality before producing your final answer.</div>
       </div>
     </details>
 
@@ -1931,6 +2044,147 @@ At the very end of the whole process, once everything else is finished, compile 
     <button class="cookie-accept" id="cookie-accept">Accept</button>
   </div>
 </div>
+
+  <div class="modal-overlay" id="modal-builder">
+    <div class="modal-box" role="dialog" aria-modal="true">
+      <div class="modal-header">
+        <h3>Prompt Builder Prompt — example use cases (100 examples)</h3>
+        <button class="modal-close" data-close="modal-builder" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <h4 class="modal-cat">Work &amp; professional prompts</h4>
+        <ul class="modal-list">
+          <li>Building a prompt to help you prep for performance reviews<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Creating a prompt to draft clear, consistent client emails<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Building a prompt to run effective one-on-one meetings with your team<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Two colleagues building a shared prompt for onboarding new hires<span class="mode-tag tag-dual">Dual</span></li>
+          <li>Creating a prompt to help you write job descriptions quickly<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Building a prompt to prepare talking points before a big meeting<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Creating a prompt to help you give constructive feedback to a team member<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Building a prompt to summarise long email threads into action items<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Two managers building a shared prompt for structuring interviews consistently<span class="mode-tag tag-dual">Dual</span></li>
+          <li>Creating a prompt to help you write a professional bio or LinkedIn summary<span class="mode-tag tag-solo">Solo</span></li>
+        </ul>
+        <h4 class="modal-cat">Turning existing docs, frameworks &amp; forms into a prompt</h4>
+        <ul class="modal-list">
+          <li>Turning an existing process document into a step-by-step prompt that walks someone through it<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Turning an insurance policy document into a prompt that walks you through what it covers<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Turning a standard problem-solving method, like a four-step root cause analysis, into a guided prompt<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Building a prompt that references several existing documents, so a report gets written the same way every time<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Building a prompt that coaches someone through filling in a specific form, producing a finished document at the end<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Turning a company&#x27;s standard operating procedure into an interactive walkthrough prompt<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Building a prompt around a specific industry framework or methodology your team always uses<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Creating a prompt that pulls together several reference documents so everyone follows the same process<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Turning a customer-facing form into a guided prompt that coaches someone through filling it out<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Building a prompt that turns your team&#x27;s checklist into a step-by-step walkthrough for new starters<span class="mode-tag tag-solo">Solo</span></li>
+        </ul>
+        <h4 class="modal-cat">Business &amp; entrepreneurship prompts</h4>
+        <ul class="modal-list">
+          <li>Building a prompt to help you validate a new business idea<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Creating a prompt to draft a simple contract or agreement<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Two co-founders building a shared prompt to run their weekly check-ins<span class="mode-tag tag-dual">Dual</span></li>
+          <li>Building a prompt to help you write product descriptions<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Creating a prompt to help you handle customer complaints consistently<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Building a prompt to help you plan a marketing campaign<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Creating a prompt to help you set quarterly goals for your business<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Two business partners building a shared prompt to review finances together<span class="mode-tag tag-dual">Dual</span></li>
+          <li>Building a prompt to help you write a compelling elevator pitch<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Creating a prompt to help you handle a difficult client conversation<span class="mode-tag tag-solo">Solo</span></li>
+        </ul>
+        <h4 class="modal-cat">Personal life &amp; family prompts</h4>
+        <ul class="modal-list">
+          <li>Building a prompt to help you plan a family holiday<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Creating a prompt to help you have a hard conversation with a sibling<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Two parents building a shared prompt for planning family routines<span class="mode-tag tag-dual">Dual</span></li>
+          <li>Building a prompt to help you write a heartfelt speech for a wedding<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Creating a prompt to help you plan a big family gathering<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Building a prompt to help you sort out a family disagreement calmly<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Creating a prompt to help you write a letter to a loved one<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Two siblings building a shared prompt to plan care for a parent<span class="mode-tag tag-dual">Dual</span></li>
+          <li>Building a prompt to help you reconnect with an old friend<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Creating a prompt to help you plan a surprise for someone<span class="mode-tag tag-solo">Solo</span></li>
+        </ul>
+        <h4 class="modal-cat">Health &amp; wellness prompts</h4>
+        <ul class="modal-list">
+          <li>Building a prompt to help you track and reflect on your mood<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Creating a prompt to help you plan meals around a health condition<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Building a prompt to help you prepare questions for a doctor&#x27;s visit<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Creating a prompt to help you build a simple exercise routine<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Building a prompt to help you wind down and sleep better<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Creating a prompt to help you manage stress day to day<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Two partners building a shared prompt to support each other&#x27;s health goals<span class="mode-tag tag-dual">Dual</span></li>
+          <li>Building a prompt to help you track symptoms before an appointment<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Creating a prompt to help you build healthier habits gradually<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Building a prompt to help you process a hard health diagnosis<span class="mode-tag tag-solo">Solo</span></li>
+        </ul>
+        <h4 class="modal-cat">Creative &amp; hobby prompts</h4>
+        <ul class="modal-list">
+          <li>Building a prompt to help you brainstorm short story ideas<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Creating a prompt to help you plan a scrapbook or photo album<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Building a prompt to help you write song lyrics<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Creating a prompt to help you plan a garden layout<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Building a prompt to help you come up with craft project ideas<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Creating a prompt to help you plan a themed dinner party<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Two friends building a shared prompt to plan a joint creative project<span class="mode-tag tag-dual">Dual</span></li>
+          <li>Building a prompt to help you learn a new recipe technique<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Creating a prompt to help you build a scrapbooking or journaling habit<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Building a prompt to help you design a tattoo concept<span class="mode-tag tag-solo">Solo</span></li>
+        </ul>
+        <h4 class="modal-cat">Education &amp; learning prompts</h4>
+        <ul class="modal-list">
+          <li>Building a prompt to help you study for an exam more effectively<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Creating a prompt to help you understand a difficult textbook topic<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Building a prompt to help you write essay outlines<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Creating a prompt to help you prep for a school interview<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Building a prompt to help you learn vocabulary in a new language<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Two students building a shared prompt to quiz each other before exams<span class="mode-tag tag-dual">Dual</span></li>
+          <li>Building a prompt to help you plan a lesson if you&#x27;re a teacher<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Creating a prompt to help you write clearer study notes<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Building a prompt to help you prepare for a thesis defence<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Creating a prompt to help you explain a concept simply to someone else<span class="mode-tag tag-solo">Solo</span></li>
+        </ul>
+        <h4 class="modal-cat">Community, team &amp; group prompts</h4>
+        <ul class="modal-list">
+          <li>Two committee members building a shared prompt to plan a community event<span class="mode-tag tag-dual">Dual</span></li>
+          <li>Building a prompt to help you run a book club discussion<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Creating a prompt to help a sports team plan their season<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Two volunteers building a shared prompt to coordinate a fundraiser<span class="mode-tag tag-dual">Dual</span></li>
+          <li>Building a prompt to help you write a newsletter for your local group<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Creating a prompt to help you plan a neighbourhood get-together<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Two co-leaders building a shared prompt to run a support group meeting<span class="mode-tag tag-dual">Dual</span></li>
+          <li>Building a prompt to help you write minutes for a committee meeting<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Creating a prompt to help you recruit volunteers for a cause<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Two organisers building a shared prompt to plan a charity event together<span class="mode-tag tag-dual">Dual</span></li>
+        </ul>
+        <h4 class="modal-cat">Parenting &amp; relationships prompts</h4>
+        <ul class="modal-list">
+          <li>Building a prompt to help you navigate a tricky parenting moment<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Creating a prompt to help you plan age-appropriate chores for your kids<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Two co-parents building a shared prompt to agree on screen time rules<span class="mode-tag tag-dual">Dual</span></li>
+          <li>Building a prompt to help you talk to your teenager about a hard topic<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Creating a prompt to help you plan a date night on a budget<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Building a prompt to help you write a letter to your future child<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Two partners building a shared prompt to plan their finances together<span class="mode-tag tag-dual">Dual</span></li>
+          <li>Building a prompt to help you navigate blending two families<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Creating a prompt to help you set boundaries with in-laws<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Two grandparents building a shared prompt to plan quality time with grandkids<span class="mode-tag tag-dual">Dual</span></li>
+        </ul>
+        <h4 class="modal-cat">Finance &amp; admin prompts</h4>
+        <ul class="modal-list">
+          <li>Building a prompt to help you organise your tax documents<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Creating a prompt to help you compare insurance policies<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Building a prompt to help you plan a household budget<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Creating a prompt to help you track subscriptions you no longer use<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Building a prompt to help you prepare for a mortgage application<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Two partners building a shared prompt to plan a joint savings goal<span class="mode-tag tag-dual">Dual</span></li>
+          <li>Building a prompt to help you understand a confusing bill or contract<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Creating a prompt to help you plan for an upcoming big purchase<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Building a prompt to help you organise digital files and passwords<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Creating a prompt to help you prepare questions for a financial advisor<span class="mode-tag tag-solo">Solo</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
 <script>
   document.querySelectorAll('.copy-btn').forEach(function(btn){
