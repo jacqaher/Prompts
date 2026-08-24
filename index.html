@@ -893,6 +893,117 @@
     color: var(--ink);
   }
 
+  /* ---------- collapsible sections ---------- */
+  .section-toggle{
+    background: var(--paper);
+    border-radius: 24px;
+    border: 1px solid #eae3da;
+    margin: 0 0 40px;
+    overflow: hidden;
+  }
+  .section-toggle summary{
+    list-style: none;
+    cursor: pointer;
+    padding: 30px 66px 30px 28px;
+    position: relative;
+    display: block;
+  }
+  .section-toggle summary::-webkit-details-marker{ display: none; }
+  .section-toggle summary::after{
+    content: "+";
+    position: absolute;
+    top: 26px;
+    right: 26px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--sage);
+    color: var(--paper);
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    font-family: 'Fraunces', serif;
+    transition: transform 0.25s ease, background 0.2s ease;
+    flex-shrink: 0;
+  }
+  .section-toggle[open] summary::after{
+    transform: rotate(135deg);
+    background: var(--accent);
+  }
+  .section-toggle h2{
+    font-size: 24px;
+    margin: 0 0 6px;
+    font-weight: 600;
+  }
+  .section-toggle .section-intro{
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 15.5px;
+    max-width: 58ch;
+  }
+  .section-toggle-body{
+    padding: 0 28px 34px;
+  }
+
+  /* ---------- tester ---------- */
+  .tester{
+    background: var(--paper);
+    border-radius: 24px;
+    padding: 32px 28px 36px;
+    margin: 0 0 56px;
+    border: 1px solid #eae3da;
+  }
+  .tester h2{
+    font-size: 24px;
+    margin: 0 0 6px;
+    font-weight: 600;
+  }
+  .tester > p{
+    margin: 0 0 20px;
+    color: var(--ink-soft);
+    font-size: 15.5px;
+    max-width: 60ch;
+  }
+  .tester-steps{
+    list-style: none;
+    margin: 0 0 26px;
+    padding: 0;
+    counter-reset: tester-step;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .tester-steps li{
+    counter-increment: tester-step;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    font-size: 15px;
+    color: var(--ink);
+  }
+  .tester-steps li::before{
+    content: counter(tester-step);
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--sage);
+    color: var(--paper);
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 12.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+  }
+  .tester-addendum-label{
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+
   /* ---------- cookie banner ---------- */
   .cookie-banner{
     display: none;
@@ -1367,8 +1478,12 @@ This prompt is written for an AI assistant to execute directly. It must be clear
 
   </section>
 
-  <section class="coming-soon" id="coming-soon">
-    <h2>Prompts coming soon</h2>
+  <details class="section-toggle coming-soon" id="coming-soon">
+    <summary>
+      <h2>Prompts coming soon</h2>
+      <p class="section-intro">A peek at what I'm building next, and a place to suggest your own — tap to see.</p>
+    </summary>
+    <div class="section-toggle-body">
     <p>I have a lot more prompts ready to go, and I'll be adding them one at a time over the coming months. Here's a preview of what's next:</p>
     <ul id="vote-list">
       <li data-id="insurance">
@@ -1397,10 +1512,15 @@ This prompt is written for an AI assistant to execute directly. It must be clear
       <button class="suggest-send" id="suggest-send">Send idea</button>
       <p class="suggest-note">This opens your email app with the message ready to send to Jackie.</p>
     </div>
-  </section>
+    </div>
+  </details>
 
-  <section class="tour" id="app-tour">
-    <h2>A quick tour of the Claude app</h2>
+  <details class="section-toggle tour" id="app-tour">
+    <summary>
+      <h2>New here? App tips &amp; tricks</h2>
+      <p class="section-intro">New to using an AI chat tool? A visual guide to what everything does — tap to see.</p>
+    </summary>
+    <div class="section-toggle-body">
     <p>These screenshots are from <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a>, but don't worry if you use ChatGPT, Copilot, or Gemini instead — they all have the same basic features (a text box, a mic button, a private/temporary chat mode) just in slightly different spots, so everything below still applies. Tap the dots for an explanation.</p>
     <div class="tour-grid">
       <div class="tour-shot-wrap">
@@ -1449,7 +1569,37 @@ This prompt is written for an AI assistant to execute directly. It must be clear
       </div>
 
     </div>
-  </section>
+    </div>
+  </details>
+
+  <details class="section-toggle tester" id="tester">
+    <summary>
+      <h2>Want to help test the prompts?</h2>
+      <p class="section-intro">Try a prompt and send me feedback — it's super simple, tap to see how.</p>
+    </summary>
+    <div class="section-toggle-body">
+    <p>I'm always looking for volunteers to try a prompt and tell me how it went. It's super simple — no extra steps, no separate app, just one bit of text you add to the end. If you've got ideas on how a prompt could be improved, this is also the easiest way to get that feedback straight to me.</p>
+    <ul class="tester-steps">
+      <li>Pick any prompt on this page and copy it as normal.</li>
+      <li>Copy the "Testing Mode Addendum" text below too, and put both into the same text box in your AI chat — the prompt first, then the addendum text straight after it.</li>
+      <li>Press send (or hit enter), then use the prompt like you normally would.</li>
+      <li>Anytime something feels off, just say "suggested edits for prompt," give your note, then carry on with the conversation where you left off. Do this as many times as you like throughout.</li>
+      <li>At the end, the AI compiles a feedback report — post it in the Facebook group or email it to me.</li>
+    </ul>
+    <div class="tester-addendum-label">Testing Mode Addendum — paste this at the end of any prompt, before sending</div>
+    <div class="copy-row">
+      <button class="copy-btn" data-target="tester-addendum">Copy testing text</button>
+      <span class="copy-hint">Copies the whole addendum — paste it after any prompt.</span>
+    </div>
+    <div class="prompt-box" id="tester-addendum">I'm using this prompt as a volunteer tester, not just as a regular user. Please do two things in addition to the normal conversation:
+
+Track your own rule-following in the background, without mentioning it to me unless I ask. Specifically watch for: skipping numbered suggestions when they're required, asking more than one question at once, dropping or rushing any step the prompt asks you to include, or otherwise deviating from what the prompt instructs. Keep a quiet running log of anything like this.
+
+Let me interrupt at any point to give feedback on the prompt itself, separate from my real answers. If I say something like "can I give a note?" or "feedback for the prompt" or similar, treat that as me stepping outside the conversation to comment on how the prompt is running — not as part of my actual answer. Log it, then smoothly pick the real conversation back up exactly where we left off.
+
+At the very end of the whole process, once everything else is finished, compile everything — your own observations plus my notes — into one clear feedback report. For each item, include: what happened, roughly where in the conversation it happened, and whether it was your observation or my note. Then ask me whether I'd like to copy that report to post in the Facebook group, or have it written as an email I can send instead.</div>
+    </div>
+  </details>
 
   <section class="comments" id="comments">
     <div class="comments-head">
