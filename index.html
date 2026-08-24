@@ -180,6 +180,39 @@
     color: var(--ink-soft);
   }
 
+  .video-link{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 22px;
+    padding-top: 22px;
+    border-top: 1px solid #eae3da;
+  }
+  .video-link .play-icon{
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--paper);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+  }
+  .video-link a{
+    color: var(--ink);
+    font-weight: 700;
+    font-size: 14.5px;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .video-link p{
+    margin: 2px 0 0;
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+
   /* ---------- app tour ---------- */
   .tour{
     background: var(--paper);
@@ -1136,6 +1169,13 @@
         <span class="num">3</span>
         <h3>Paste &amp; send</h3>
         <p>Open your AI chat tool, paste it into the text box, and hit send.</p>
+      </div>
+    </div>
+    <div class="video-link">
+      <span class="play-icon">▶</span>
+      <div>
+        <a href="https://youtu.be/U_LiVP4aCwY" target="_blank" rel="noopener">Watch how it works (video)</a>
+        <p>See me copy a prompt, paste it into an AI chat, and answer the first few questions — start to finish.</p>
       </div>
     </div>
   </section>
