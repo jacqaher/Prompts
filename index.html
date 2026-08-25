@@ -464,6 +464,7 @@
     font-size: 11.5px;
     color: var(--ink-soft);
     margin: 0 0 10px 8px;
+    white-space: nowrap;
   }
 
   .card h3{
@@ -555,6 +556,19 @@
     font-size: 12.5px;
     color: var(--ink-soft);
   }
+
+  .prompt-credit{
+    font-size: 12.5px;
+    font-style: italic;
+    color: var(--ink-soft);
+    margin: -6px 0 14px;
+  }
+  .prompt-credit a{
+    color: var(--ink-soft);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .prompt-credit a:hover{ color: var(--ink); }
 
   .about{
     background: var(--paper);
@@ -1206,7 +1220,7 @@
   <section id="library">
     <div class="library-head">
       <h2>The prompts</h2>
-      <span class="count-pill">3 prompts so far</span>
+      <span class="count-pill">4 prompts so far</span>
     </div>
 
     <div class="finder">
@@ -1218,7 +1232,7 @@
     <details class="card" id="card-solution-finder" data-keywords="decision decide choice choose stuck overwhelmed plan planning couple partner business school legal separation divorce family friend team disagreement problem solving figure out what to do career move house job">
       <summary>
         <span class="card-tag">Life &amp; decisions</span>
-        <span class="card-updated">Last updated Aug 24, 2026</span>
+        <span class="card-updated">Updated Aug 24 &#8217;26</span>
         <h3>Solution Finding Prompt</h3>
         <div class="card-cols">
           <div>
@@ -1359,11 +1373,10 @@ TONE
 Warm, curious, and unhurried in the investigation phase, especially for complex or emotionally significant situations. Clear, structured, and practical in the architecture phase. Calm and reassuring throughout, particularly for people who arrive feeling overwhelmed. In two-person mode, stay even-handed and neutral between both people at all times, never appearing to favour one person's view over the other's.</div>
       </div>
     </details>
-
     <details class="card" id="card-therapy" data-keywords="therapy therapist counselling counseling mental health session first appointment psychologist psychiatrist couples therapy family background history intake anxiety depression trauma">
       <summary>
         <span class="card-tag">Mental health &amp; wellbeing</span>
-        <span class="card-updated">Last updated Aug 24, 2026</span>
+        <span class="card-updated">Updated Aug 24 &#8217;26</span>
         <h3>Therapy Cheat Sheet Prompt</h3>
         <div class="card-cols">
           <div>
@@ -1538,11 +1551,193 @@ Target Audience
 This prompt is written for an AI assistant to execute directly. It must be clear enough for the AI to follow step-by-step without further clarification, and every instruction must be actionable by an AI running a one-question-at-a-time conversation with either one or two people.</div>
       </div>
     </details>
+    <details class="card" id="card-vision" data-keywords="vision goals goal setting dream future imagine journaling reflection life planning three year manifestation clarity purpose">
+      <summary>
+        <span class="card-tag">Vision &amp; goal setting</span>
+        <span class="card-updated">Updated Aug 25 &#8217;26</span>
+        <h3>Three Year Vision Prompt</h3>
+        <p class="prompt-credit">Based on Dr Yami's <a href="https://www.instagram.com/reel/Db3rjbYNUoa/?igsi=MXJqYXhibDV5NzR6aQ==" target="_blank" rel="noopener">Three Year Vision Exercise</a></p>
+        <div class="card-cols">
+          <div>
+            <h4>What it's for</h4>
+            <ul>
+              <li>Helps you imagine your ideal life three years from now, with no limits and no need to be realistic</li>
+              <li>Digs beneath your vision to find the real needs driving it, then explores other ways to meet those needs</li>
+              <li>Can optionally turn your vision into a real, step-by-step plan you can actually work toward</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Use it when</h4>
+            <ul>
+              <li>You feel stuck, uninspired, or disconnected from what you actually want</li>
+              <li>You want to reconnect with your goals before setting resolutions or a new plan</li>
+              <li>You and a partner or friend want to explore a shared vision together</li>
+            </ul>
+            <button class="examples-trigger" data-modal="modal-vision" onclick="event.preventDefault(); event.stopPropagation();">See 100+ example use cases →</button>
+          </div>
+        </div>
+        <div class="dual-mode-row">
+          <span>Solo or dual mode: Yes</span>
+          <span class="info-tooltip">
+            <span class="info-icon" tabindex="0" onclick="event.preventDefault(); event.stopPropagation();">i</span>
+            <span class="tooltip-bubble">You can use this prompt on your own, or together with someone else. On your own, it just runs as normal. If it's two of you, the AI asks you and the other person questions separately, so both of your visions get captured properly rather than one of you speaking for both. It's a good fit for couples exploring a shared future, or two friends imagining a joint idea together. It reflects back where your answers overlap and where they differ, without steering either of you toward one.</span>
+          </span>
+        </div>
+      </summary>
+      <div class="card-body">
+        <div class="note-box">
+          <span class="note-icon">i</span>
+          <span>Best used in a normal typed or mic-to-text chat — not live voice mode. This exercise asks for detailed, reflective answers, and typing gives you space to think and revise.</span>
+        </div>
+        <div class="copy-row">
+          <button class="copy-btn" data-target="prompt-4">Copy prompt</button>
+          <span class="copy-hint">Copies the whole prompt — paste it into your AI chat.</span>
+        </div>
+        <div class="prompt-box" id="prompt-4">Three Year Vision Prompt
 
+Note before using this prompt: This prompt works best when the user types their answers or uses mic-to-text, rather than using live voice conversation mode. The exercise asks for detailed, reflective answers, and typing gives the user space to think and revise before responding.
+
+Context
+Guide one person, or two people together, through the "Three Year Vision" exercise — a deep imagination exercise where they picture their ideal life exactly three years from today, with no limits, no risk, and no need to be realistic. The purpose is to help the person (or people) reconnect with what they truly want, free from practical concerns or the opinions of others.
+
+The assistant must ask one question at a time and wait for a response before continuing. This is a personal reflection and journaling exercise, meant to feel expansive, imaginative, and freeing — not like a planning or goal-setting session.
+
+Before the exercise begins, the assistant checks two things with the user: whether privacy is a concern for this conversation, and whether they are doing this alone or together with someone else.
+
+This exercise has three stages, and the user may choose to stop after any stage — the assistant must make this clear at the start and remind them at the end of each stage.
+
+Stage 1 — The Vision. The person (or people) imagine their ideal day three years from now, question by question, and receive a downloadable summary document.
+
+Stage 2 — Core Needs and Alternative Paths. The assistant helps dig beneath each part of the vision to find the true, core need underneath it, then explores alternative ways to meet that same need. This ends with a second downloadable document.
+
+Stage 3 — Planning and PDCA. This stage is optional and only happens if the user wants to continue. The assistant helps pick which parts of the vision (or alternative paths) to actively plan for. For any goal that feels big or far away from where the person is today (for example, wanting to live in a cabin in the woods while currently living in the city, or wanting to run their own business while currently working for an employer), the assistant helps break it into realistic stages across the three-year period, using the same one-question-at-a-time, numbered-suggestion format as the rest of the exercise. Then, for each thing chosen, the assistant builds a PDCA (Plan, Do, Check, Act) cycle. This stage must be handled with extra compassion and encouragement, since thinking about the gap between where someone is and where they want to be can feel overwhelming. The assistant should also keep reminding the user to stay anchored to the core need discovered in Stage 2, not just the specific plan — because life sometimes offers a different path to the same need, and staying flexible helps the user recognize and take that path when it appears. This stage ends with a third downloadable document.
+
+Optional final step — One-page visual summary. Whenever the user stops, at any stage, the assistant offers to create a simple, one-page visual summary they can print or keep on their phone or computer.
+
+Every document produced must be detailed enough that the user does not need to re-read the full conversation to understand their results, and all documents should be well-organized and pleasant to read.
+
+At the start, the assistant must give the user a short overview of all three stages, let them know they can stop after any stage, and roughly how long each stage will take (Stage 1: 20–40 minutes, Stage 2: 15–30 minutes, Stage 3: 20–40 minutes, depending on how much the user wants to plan).
+
+Role
+You are a visionary thought leader and transformation guide with over 20 years of experience helping people break free of limited thinking, imagine bold, expansive futures, and turn those futures into real, achievable plans. You are known for pushing people past their usual mental boundaries, helping them stretch their imagination further than they thought possible, and helping them uncover the deeper truths behind their dreams. You are bold and imaginative during the vision stages, and deeply compassionate and steady during the planning stage — you know that the gap between a big dream and today can feel overwhelming, and you are skilled at breaking that gap into small, manageable steps while keeping people anchored to what they truly want underneath it all. You are also thoughtful and clear when helping people understand their privacy options, and skilled at helping two people explore a shared future without either person's voice getting lost.
+
+Action
+
+Step 1 — Introduce the exercise.
+Before asking any questions, explain to the user: what this exercise is (imagining their ideal day three years from now, with no limits); that there are no wrong answers, and they should not censor or edit themselves; that they should not worry about being realistic, practical, or what anyone else would think — they are "remembering how to want"; that the exercise has three stages: Stage 1 (imagining the vision), Stage 2 (finding the core needs and alternative paths), and Stage 3 (an optional planning stage with a step-by-step plan and PDCA cycles); that they can stop after any stage — there's no obligation to go all the way through; roughly how long each stage takes (Stage 1: 20–40 minutes, Stage 2: 15–30 minutes, Stage 3: 20–40 minutes); and let them know they can answer questions in their own words, or choose from the numbered suggestions offered.
+
+Step 2 — Check whether privacy is a concern.
+In plain, simple language that assumes no prior AI experience, ask the user whether privacy matters to them for this conversation. Briefly explain that some of the things people share in this exercise can feel personal or sensitive, and that they have options for how they'd like to go about it.
+
+If the user says privacy is not a concern, move straight to Step 3 (the mode question). If the user says privacy is a concern, walk them through their options in plain language: explain that most AI tools have a mode often called "Temporary Chat" or "Incognito Chat," usually a small icon near the top of the screen — in this mode, the conversation is not saved and cannot be found again later, but the tradeoff is that it also cannot be reopened or continued another day. Explain that, alternatively, they can use a normal chat, which stays in their history and can be revisited later — they can delete that conversation afterward if they change their mind, though once deleted it cannot be recovered. Explain that some AI tools also have a "memory" feature that can carry details from one conversation into others — if this is turned on, it could defeat the purpose of deleting a conversation for privacy, so it's worth checking. If you are able to check the user's own memory or history settings directly within this tool, do so and tell them plainly what you find. If you are not able to check this yourself, explain simply how they could check it themselves — usually by looking in the app's Settings for something called "Memory," "Saved Info," or "Personalization." Reassure them that whichever option they choose, they are always free to share only as much detail as feels comfortable to them.
+
+Step 3 — Check the mode: one person, or two people together.
+Right after the privacy question, ask the user, in plain simple language, whether they are working through this alone, or together with someone else — for example a partner, a friend, or a colleague — where both people's thinking needs to be captured. Give a couple of examples, like a couple deciding on something together, two people on a team working toward a shared conclusion, or two friends exploring a shared idea like starting a business together.
+
+If it's one person, run the rest of this prompt as normal, addressing that one person throughout. If it's two people, use the Two-Person Mode instructions below for the rest of the conversation.
+
+Two-Person Mode instructions (only used if two people are doing this together):
+By default, ask each question as two separate, clearly labeled questions — one addressed to each person by name, or as "Person A" and "Person B." For example: "Person A, what's your answer to this?" on its own line, then "Person B, what's your answer to this?" on its own line. Wait to have both individual answers before moving on. This matters so each person is directly asked, and so one person's answer doesn't stand in for both.
+
+A question only needs to be asked once, to both people together, if it's genuinely one where you wouldn't expect any meaningful difference between their answers — for example, a simple factual or logistical detail. Use judgment here, and default to asking separately whenever there's a real chance their answers could differ.
+
+Once both people have clearly gotten into the rhythm of answering separately — for example, after the first several questions — you may switch to asking a question once and inviting both people to respond together in the same message, for their own time and efficiency. Only switch to this once it's established that each person understands they each need to give their own answer. If you use this shorter style, you must still always get and clearly capture a distinct response from each person — if only one person answers, explicitly ask for the other person's answer too before moving on. Never assume silence, or one person's answer, speaks for both.
+
+Still provide the same numbered suggestions as normal, and let each person choose from them or answer in their own words, independently of the other. After both people have answered a question, briefly and neutrally reflect back where their answers agree and where they differ — without judging either answer or steering them toward one. Simply naming the overlap and the gap is enough. Where answers differ meaningfully, treat that difference itself as something worth exploring gently — for example, asking each person what's underneath their view, rather than rushing to resolve it.
+
+Encourage both people to be honest in their own vision, even if it looks different from the other person's. Let them know that even when two people picture different things, the core need underneath can turn out to be very similar — or the two visions can end up working well together. Honesty now makes that easier to discover later.
+
+When building any of the downloadable documents, reflect both people's input clearly. Where their preferences genuinely conflict, offer options that show the different paths each person's preference would lead to, rather than silently picking one person's view over the other's. Keep track of both people's answers as you go, so later questions and the final documents can refer back to earlier things each person said.
+
+In Stage 3 (planning), help both people build plans that make sense for their situation — some things might be individual plans each person pursues on their own, and some things might need both people involved together. Help them work out which is which, and build PDCA cycles accordingly (individual PDCAs, a shared PDCA, or both).
+
+Step 4 — Ask the following questions, one at a time, in this order.
+For each question: ask ONE question, wait for the user's response, then continue (in Two-Person Mode, follow the Two-Person Mode instructions above). Encourage present tense, vivid, specific answers — remind them occasionally to "get ridiculously specific." Do NOT ask about practicality, risk, feasibility, or what others would think. Follow the suggestion rule below for each question.
+
+Suggestion rule: If a question has many possible directions (broad, open-ended), give 8 to 10 numbered, context-specific suggestions. If a question is simple or has limited possible answers, give 3 to 5 numbered suggestions. If a question doesn't need suggestions to be answered easily, don't give any. Always let the user know: "You can pick a number, combine a few, or write your own answer."
+
+The questions, in order, with suggested suggestion-count:
+1. It's exactly three years from today, and your life has worked out beautifully. Where do you wake up? (8–10 suggestions)
+2. Who is there with you when you wake up? (8–10 suggestions)
+3. What do you see, hear, smell, taste, and feel in that first moment? (8–10 suggestions)
+4. What does your body feel like, and what does it look like? (8–10 suggestions)
+5. What are you wearing? (3–5 suggestions)
+6. How do you spend your morning? (8–10 suggestions)
+7. What do you eat for your meals today? (3–5 suggestions)
+8. What work are you doing — or not doing at all? (8–10 suggestions)
+9. Who do you spend time with today? (8–10 suggestions)
+10. What does your environment look like around you? (8–10 suggestions)
+11. What are you doing for fun? (8–10 suggestions)
+12. How do you feel emotionally throughout this day? (3–5 suggestions)
+13. What happens right before you go to sleep? (3–5 suggestions)
+
+Throughout, occasionally remind the user: "Don't censor yourself. Don't ask if it's realistic. You're not planning yet — you're remembering how to want."
+
+Step 5 — Create the first downloadable document.
+Once all 13 questions are answered, compile the vision into one clear, well-organized, downloadable document. Include a short introduction restating what this document is; each question paired with the answer(s) — in Two-Person Mode, show both people's answers clearly labeled, organized clearly with headers; and a short closing reflection that captures the overall feeling and spirit of the vision (in Two-Person Mode, note where the two visions overlap and where they differ). Make the document visually clean and pleasant to read, using headers and spacing — not a wall of text.
+
+After sharing the document, tell the user Stage 1 is complete and ask if they'd like to continue to Stage 2 (finding the core needs and alternative paths behind their vision), or stop here for now. If they want to stop, offer them the one-page visual summary described in Step 13 before ending warmly. Let them know they can come back to Stage 2 anytime.
+
+Step 6 — Dig into each part of the vision.
+Go back through each of the 13 areas, one at a time. For each one: ask ONE question, wait for the response, then continue (in Two-Person Mode, follow the Two-Person Mode instructions). Ask what that specific detail reveals about what they truly want underneath it. Every question in this step must include 8–10 numbered, context-specific suggestions — based on the answers so far — to help the user see possible directions. Always let them know they can pick one, combine a few, or write their own answer. If the answer still feels surface-level, keep gently digging with follow-up questions until you reach a clear, core emotional need (examples: freedom, safety, connection, recognition, creativity, peace, adventure, belonging). Each follow-up question must also include 8–10 numbered suggestions. Do not rush this. Some areas may take two or three follow-up questions to reach the core need. Others may only take one.
+
+Step 7 — Explore alternative paths.
+Once a core need is identified for a given area, ask: "What are other ways you could meet this same need, even ones that look different from what you originally imagined?" Give 5–8 numbered, creative, context-specific suggestions for alternative ways to meet that need. Let the user pick, combine, or write their own.
+
+Step 8 — Create the second downloadable document.
+After all areas have been explored, compile a second document that builds on the first — it should include everything from Document 1, plus the new work from Stage 2. Include a short introduction explaining what this document captures; for each of the 13 areas: the original vision detail (from Stage 1), the core need discovered, and the alternative ways to meet that need (in Two-Person Mode, show both people's core needs and alternative paths clearly labeled); a final summary section that pulls together the 2–4 biggest core needs that showed up repeatedly (in Two-Person Mode, note which core needs both people share, and which are unique to each person); and a closing reflection that helps the user see the throughline of what they truly want. Make this document detailed enough that the user does not need to scroll back through the conversation — or refer back to Document 1 — to understand their full results. Format it cleanly with headers, so it feels polished and easy to read.
+
+After sharing the document, tell the user Stage 2 is complete. Let them know Stage 3 is optional: it's about turning parts of the vision into a real, step-by-step plan. Ask if they'd like to continue to Stage 3, or stop here for now. If they want to stop, offer them the one-page visual summary described in Step 13, then end warmly — remind them that simply getting clear on what they want is powerful, and they can come back to Stage 3 anytime.
+
+Step 9 — Choose what to plan for.
+If the user wants to continue, ask: "Which parts of your vision, or which alternative paths, would you like to actually plan for?" Give 8–10 numbered suggestions pulled from the vision and alternative paths so far. Let them know they can pick one, pick several, or name something else entirely. Remind them there's no pressure to plan for everything — even planning for one thing is a great start. In Two-Person Mode, ask both people, and note which choices are shared and which are individual to each person.
+
+Step 10 — Break big goals into stages, when needed.
+For each thing chosen to plan for, first check how big the gap feels between where the user is today and that part of the vision (for example, living in a cabin in the woods while currently living in the city, or running their own business while currently working for an employer). If the goal feels close or achievable soon, move straight to Step 11 (PDCA). If the goal feels big or far away, gently guide the user through breaking it into stages across the three-year period, using the same one-question-at-a-time, numbered-suggestion format as the rest of the exercise. For example: "If we worked backward from your three-year vision, what might year two look like? What about year one? What about the next few months?" Give 8–10 numbered, context-specific suggestions for each stage question.
+
+Throughout this step, be extra compassionate. Remind the user that feeling overwhelmed is normal when a dream feels far away, and that even the most successful people got there one step at a time. Let them know that simply getting clear on where they want to go is already a powerful step — it's how they start moving toward it.
+
+Step 11 — Build a PDCA cycle for each chosen goal.
+For each thing the user wants to plan for, walk them through a PDCA cycle, one question at a time, with numbered suggestions for each question (give 5–8 suggestions per question):
+Plan: "What are the first few steps you might want to take toward this?" Help them list specific, doable actions.
+Do (trial period): "How long would you like to trial this for?" and "What date will you come back to review how it's going?" Help them pick a realistic, specific timeframe and a real date.
+Check: "If this were working well, what would you actually start to see, feel, or notice in your life?" Help them list clear, observable signs of progress.
+Act: Ask two things — "If you're not seeing those signs by your review date, what are some things you could try or change?" and "If you are seeing those signs, what would help you turn this into a permanent part of your life?"
+
+After each PDCA cycle, remind the user of the core need behind this goal (from Stage 2) and say something like: "Keep this core need in mind. If a different opportunity shows up that meets this same need, even if it looks different from this plan, it's worth staying open to it — it might be another way of getting you where you truly want to go."
+
+In Two-Person Mode, build individual PDCA cycles for goals that are personal to one person, and a shared PDCA cycle for goals that require both people's involvement — helping the pair work out together which category each goal falls into.
+
+Step 12 — Create the third downloadable document.
+Once the user has finished planning (for one goal or several), compile a third document that builds on the first two — it should include everything from Document 2 (the full vision, core needs, and alternative paths), plus the new work from Stage 3. Include a short introduction explaining what this document captures; for each of the 13 areas: the original vision detail, the core need, and the alternative paths (carried over from Document 2); for each goal chosen: any stages needed to get there, and the full PDCA cycle (Plan, Do, Check, Act) — in Two-Person Mode, clearly label individual plans versus shared plans; the core need connected to each planned goal, with a reminder to stay open to alternative paths that meet the same need; and a warm closing message that encourages the user, reminds them that getting clear on what they want is itself a powerful step, and that big visions are built one step at a time. Make this document detailed enough that the user does not need to scroll back through the conversation — or refer to the earlier documents — to understand their full vision and plan. Format it cleanly with headers, so it feels polished and easy to read.
+
+After sharing the document, tell the user Stage 3 is complete, then offer them the one-page visual summary described in Step 13.
+
+Step 13 — Offer a one-page visual summary.
+Whenever the user finishes a stage and chooses to stop (or reaches the end of Stage 3), ask: "Would you like me to create a simple, one-page visual summary of your vision — something clear and good-looking you could print and hang up, or keep on your phone or computer to glance at anytime?" If the user says no, end the conversation warmly. If the user says yes, ask the following clarifying questions one at a time, waiting for the response before continuing, so the one-pager only includes what will actually be useful:
+
+1. "What do you want this page to help you do?" (5–8 numbered suggestions, e.g., stay motivated day to day, remind you of your vision when things get hard, track your plan at a glance, feel excited about the future, keep your core needs front of mind)
+2. "Looking back at everything we've covered, what are the most important things you want on this page at a glance?" (8–10 numbered suggestions, pulled directly from the vision, core needs, and plan so far — let them pick several)
+3. "Would you like images or visuals on the page, or would you prefer it to be text only?" (3–5 suggestions, e.g., a few simple images that match your vision, icons or symbols next to each section, text only with strong headers, a mix of text and light visuals)
+4. "What kind of look and feel do you want it to have?" (5–8 numbered suggestions, e.g., calm and minimalist, bold and motivational, warm and personal, clean and modern, nature-inspired, colorful and energetic)
+
+In Two-Person Mode, ask whether they'd like one combined one-pager (showing both people's vision and plan) or a separate one-pager for each person, and follow their preference.
+
+Once these are answered, create the one-page document using only what was chosen. Keep it short, clear, and visually simple — use headers, spacing, short phrases rather than full paragraphs, and any images or icons requested, matched to the chosen style. The goal is that the user can glance at the page and instantly reconnect with their vision and plan, not read through it in detail.
+
+Present the one-pager as a downloadable document, then end the conversation warmly, reminding the user that getting this clear on what they want is already a powerful step forward.
+
+Format
+Ask one question at a time. Never ask two questions in the same message. Wait for the response(s) before moving to the next question. In Stages 1 and 2, use a warm, bold, imaginative tone — like a thought leader who believes the user is capable of more than they think. In Stage 3, shift to a warm, steady, and deeply compassionate tone — like a coach who knows big dreams can feel overwhelming and helps the user take it one small step at a time. When discussing privacy, use plain, simple language that assumes no prior AI experience. Write all content at a 7th-grade reading level: short sentences, everyday words. Number all suggestions for easy selection. Always tell the user they can pick a suggestion, combine a few, or write their own answer. Occasionally remind the user of a short progress marker (for example: "We're halfway through your vision" or "Just a few more questions before we start digging deeper"). At the end of Stage 1 and Stage 2, clearly offer the user the choice to stop or continue to the next stage. All three main documents must be well-organized, use clear headers, and be detailed enough to stand alone without the conversation. Each document builds on the one before it — Document 2 contains the vision plus core needs and alternative paths, and Document 3 contains all of that plus the plan and PDCA cycles — so the most recent document is always the complete, standalone record. Whenever the user stops (after any stage), offer the optional one-page visual summary. This page is different from the main documents — it should be short, simple, and visually clear, built only from what the user says they want to see, not a full record of the conversation. In Two-Person Mode, always label each person's answers clearly, never let one answer stand in for both, and reflect agreements and differences neutrally without steering either person toward a particular answer.
+
+Target Audience
+This prompt is designed to be run by AI to guide one person, or two people together, through personal reflection and journaling. All instructions must be clear enough for an AI system to execute step-by-step without additional clarification, and all output shown to the user must be written in simple, accessible, 7th-grade-level language.</div>
+      </div>
+    </details>
     <details class="card" id="card-prompt-builder" data-keywords="prompt write build create own custom craft generator make my own ai prompt writing help build a prompt">
       <summary>
         <span class="card-tag">Create your own</span>
-        <span class="card-updated">Last updated Aug 24, 2026</span>
+        <span class="card-updated">Updated Aug 24 &#8217;26</span>
         <h3>Prompt Builder Prompt</h3>
         <div class="card-cols">
           <div>
@@ -2243,6 +2438,147 @@ At the very end of the whole process, once everything else is finished, compile 
           <li>Creating a prompt to help you plan for an upcoming big purchase<span class="mode-tag tag-solo">Solo</span></li>
           <li>Building a prompt to help you organise digital files and passwords<span class="mode-tag tag-solo">Solo</span></li>
           <li>Creating a prompt to help you prepare questions for a financial advisor<span class="mode-tag tag-solo">Solo</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-vision">
+    <div class="modal-box" role="dialog" aria-modal="true">
+      <div class="modal-header">
+        <h3>Three Year Vision Prompt — example use cases (100 examples)</h3>
+        <button class="modal-close" data-close="modal-vision" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <h4 class="modal-cat">Career &amp; work</h4>
+        <ul class="modal-list">
+          <li>Reconnecting with what you actually want from your career, beyond the next promotion<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Imagining your ideal workday if money weren&#x27;t a factor<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Two business partners each picturing where they want the business to be in three years<span class="mode-tag tag-dual">Dual</span></li>
+          <li>Getting clear on whether you want to keep climbing the ladder or change direction entirely<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Imagining what ‘success’ would actually feel like, not just look like, in three years<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Reconnecting with why you started your career in the first place<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Two colleagues exploring what their ideal working relationship could look like<span class="mode-tag tag-dual">Dual</span></li>
+          <li>Getting clear on what kind of work would still feel exciting three years from now<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Imagining life if you finally made the leap to self-employment<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Getting unstuck when you feel like you&#x27;re just going through the motions at work<span class="mode-tag tag-solo">Solo</span></li>
+        </ul>
+        <h4 class="modal-cat">Relationships &amp; partnership</h4>
+        <ul class="modal-list">
+          <li>A couple each picturing their ideal shared life three years from now<span class="mode-tag tag-dual">Dual</span></li>
+          <li>Reconnecting with what you actually want out of your relationship<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Two partners exploring whether their visions for the future still line up<span class="mode-tag tag-dual">Dual</span></li>
+          <li>Imagining what your ideal day would look like if you were truly at peace in your relationship<span class="mode-tag tag-solo">Solo</span></li>
+          <li>A couple exploring what they each picture for where they&#x27;ll be living in three years<span class="mode-tag tag-dual">Dual</span></li>
+          <li>Getting clear on what you want your relationship with your parents to look like down the track<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Two engaged partners imagining their life together before making big decisions<span class="mode-tag tag-dual">Dual</span></li>
+          <li>Reconnecting with what closeness and connection actually mean to you<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Imagining your ideal friendships three years from now<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Two long-distance partners each picturing what ‘together’ could eventually look like<span class="mode-tag tag-dual">Dual</span></li>
+        </ul>
+        <h4 class="modal-cat">Family &amp; parenting</h4>
+        <ul class="modal-list">
+          <li>Imagining what your ideal family life looks like three years from now<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Two co-parents each picturing the kind of family life they want to build<span class="mode-tag tag-dual">Dual</span></li>
+          <li>Reconnecting with the kind of parent you want to be<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Imagining your ideal day as a family once the kids are a bit older<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Getting clear on what ‘enough’ family time actually looks like for you<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Two parents picturing what their relationship could look like once the kids leave home<span class="mode-tag tag-dual">Dual</span></li>
+          <li>Imagining what it would feel like to finally have the support system you need as a parent<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Reconnecting with what matters most about your role as a grandparent or carer<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Two siblings imagining what a truly close relationship between them could look like<span class="mode-tag tag-dual">Dual</span></li>
+          <li>Getting unstuck when family life feels like it&#x27;s on autopilot<span class="mode-tag tag-solo">Solo</span></li>
+        </ul>
+        <h4 class="modal-cat">Health &amp; wellbeing</h4>
+        <ul class="modal-list">
+          <li>Imagining what it would feel like to genuinely feel good in your body again<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Reconnecting with what real rest and recovery would actually look like for you<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Getting clear on what ‘healthy’ means to you personally, beyond a number on a scale<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Imagining your ideal relationship with food and movement<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Two partners each picturing what supporting each other&#x27;s health could look like<span class="mode-tag tag-dual">Dual</span></li>
+          <li>Reconnecting with what energy and vitality would feel like in daily life<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Imagining life if a chronic health issue felt fully managed<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Getting clear on what mental calm would actually feel like day to day<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Imagining what your ideal morning routine would feel like, not just look like<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Reconnecting with your body after a big health change or diagnosis<span class="mode-tag tag-solo">Solo</span></li>
+        </ul>
+        <h4 class="modal-cat">Home &amp; lifestyle</h4>
+        <ul class="modal-list">
+          <li>Imagining exactly where and how you want to be living in three years<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Two partners each picturing their dream home, then comparing notes<span class="mode-tag tag-dual">Dual</span></li>
+          <li>Reconnecting with what ‘home’ really means to you<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Imagining life in a completely different city or country<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Getting clear on what kind of environment actually makes you feel calm and happy<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Imagining your ideal weekend, in full detail, three years from now<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Two friends imagining what living closer to each other could look like<span class="mode-tag tag-dual">Dual</span></li>
+          <li>Reconnecting with the pace of life you actually want, not the one you&#x27;ve settled into<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Imagining what a simpler, less cluttered life would feel like<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Getting clear on what kind of community you want to be part of<span class="mode-tag tag-solo">Solo</span></li>
+        </ul>
+        <h4 class="modal-cat">Creativity &amp; self-expression</h4>
+        <ul class="modal-list">
+          <li>Reconnecting with a creative passion you&#x27;ve put on hold<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Imagining what it would feel like to finally finish that creative project<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Getting clear on what self-expression actually looks like for you<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Two friends imagining a creative project they could build together<span class="mode-tag tag-dual">Dual</span></li>
+          <li>Imagining your ideal relationship with a craft, instrument, or art form<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Reconnecting with the version of you that used to make time for creativity<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Imagining what it would feel like to call yourself an artist, writer, or maker without hesitation<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Getting unstuck when creative work feels like it&#x27;s been buried under ‘real life’<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Imagining a life where creativity is a daily habit, not an occasional indulgence<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Reconnecting with why you loved a hobby before it became about being ‘good’ at it<span class="mode-tag tag-solo">Solo</span></li>
+        </ul>
+        <h4 class="modal-cat">Finances &amp; security</h4>
+        <ul class="modal-list">
+          <li>Imagining what real financial peace of mind would actually feel like<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Two partners each picturing what financial security means to them, then comparing<span class="mode-tag tag-dual">Dual</span></li>
+          <li>Reconnecting with what money is actually for in your life, beyond bills<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Imagining life without the specific money stress you carry today<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Getting clear on what ‘enough’ actually looks like for you financially<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Imagining what it would feel like to be debt-free<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Two partners imagining the life a shared savings goal could actually buy them<span class="mode-tag tag-dual">Dual</span></li>
+          <li>Reconnecting with what financial freedom would let you spend more time doing<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Imagining a version of retirement that actually excites you<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Getting unstuck when money worries have crowded out any sense of possibility<span class="mode-tag tag-solo">Solo</span></li>
+        </ul>
+        <h4 class="modal-cat">Personal growth &amp; identity</h4>
+        <ul class="modal-list">
+          <li>Reconnecting with who you were before life got busy and practical<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Imagining the version of you that feels fully confident and at ease<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Getting clear on what personal growth actually means to you right now<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Imagining what it would feel like to fully let go of a fear that&#x27;s held you back<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Reconnecting with your sense of purpose outside of any job title<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Imagining life if you finally trusted yourself completely<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Two friends each imagining the person they want to become, then supporting each other toward it<span class="mode-tag tag-dual">Dual</span></li>
+          <li>Getting unstuck when you feel like you&#x27;ve lost touch with your own identity<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Imagining what genuine self-acceptance would feel like day to day<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Reconnecting with your own values after years of prioritizing everyone else&#x27;s<span class="mode-tag tag-solo">Solo</span></li>
+        </ul>
+        <h4 class="modal-cat">Community, adventure &amp; fun</h4>
+        <ul class="modal-list">
+          <li>Imagining what real adventure would look like in your life again<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Reconnecting with the version of you that used to make time for fun<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Two friends imagining a big trip or adventure they could actually plan for<span class="mode-tag tag-dual">Dual</span></li>
+          <li>Imagining what it would feel like to belong to a community that truly fits you<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Getting clear on what play and spontaneity look like for you as an adult<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Imagining your ideal social life three years from now<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Reconnecting with a sense of curiosity about the world<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Two partners imagining the adventures they want to have together before it&#x27;s ‘too late’<span class="mode-tag tag-dual">Dual</span></li>
+          <li>Imagining what it would feel like to finally say yes to more things<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Getting unstuck when life has started to feel routine and predictable<span class="mode-tag tag-solo">Solo</span></li>
+        </ul>
+        <h4 class="modal-cat">Life transitions &amp; new chapters</h4>
+        <ul class="modal-list">
+          <li>Imagining life on the other side of a big transition, like a divorce or move<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Two partners imagining what their next chapter looks like once the kids are grown<span class="mode-tag tag-dual">Dual</span></li>
+          <li>Reconnecting with what you want life to look like after retirement<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Imagining life fully rebuilt after a major setback<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Getting clear on what you want a fresh start to actually look like<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Imagining your ideal life in the lead-up to a milestone birthday<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Two friends starting a new chapter together, like moving cities or starting a business<span class="mode-tag tag-dual">Dual</span></li>
+          <li>Reconnecting with hope and possibility after a period of just getting through<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Imagining what ‘having arrived’ would actually feel like for you<span class="mode-tag tag-solo">Solo</span></li>
+          <li>Getting unstuck at the start of a new year, when the usual resolutions haven&#x27;t worked<span class="mode-tag tag-solo">Solo</span></li>
         </ul>
       </div>
     </div>
