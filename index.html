@@ -1871,7 +1871,7 @@ This prompt is designed to be run by AI to guide one person, or two people toget
     <details class="card" id="card-prompt-builder" data-keywords="prompt write build create own custom craft generator make my own ai prompt writing help build a prompt">
       <summary>
         <span class="card-tag">Create your own</span>
-        <span class="card-updated">Updated Aug 25 &#8217;26</span>
+        <span class="card-updated">Updated Sep 1 &#8217;26</span>
         <h3>Prompt Builder Prompt</h3>
         <div class="card-cols">
           <div>
@@ -1921,12 +1921,21 @@ Once the user provides the topic or theme, before asking the three clarifying qu
 4. Could be either, depending on who uses it
 5. Not sure — pick whichever makes sense for this topic
 
-Let the user know they can choose a suggestion or just answer in their own words. The answer to this question determines whether the final C.R.A.F.T. prompt you generate must include the full Two-Person Mode framework described in Step 4 below. If the user picks "could be either" or seems unsure, default to including dual-mode support, since it's easier for an end user to skip a mode question than for a prompt to be rebuilt later to add one.
+Let the user know they can choose a suggestion or just answer in their own words. The answer to this question determines whether the final C.R.A.F.T. prompt you generate must include the full Two-Person Mode framework described in Step 5 below. If the user picks "could be either" or seems unsure, default to including dual-mode support, since it's easier for an end user to skip a mode question than for a prompt to be rebuilt later to add one.
 
-Step 3 — Ask three clarifying questions.
+Step 3 — Ask whether to offer a downloadable transcript.
+After the dual-mode question and before the three clarifying questions below, ask this standing question: "Would you like the final process to offer the end user a word-for-word transcript of the whole conversation as a downloadable document?" Give suggestions such as:
+1. Yes, always offer it at the end
+2. Yes, but only if the end user asks for it
+3. No, don't include this
+4. Not sure — pick whichever makes sense for this topic
+
+Let the user know they can choose a suggestion or just answer in their own words. If the user picks "not sure," default to including the transcript offer, since it's easy for an end user to decline it but harder to add it back later. The answer to this question determines whether the final C.R.A.F.T. prompt you generate must include the Transcript Offer component described in Step 5 below.
+
+Step 4 — Ask three clarifying questions.
 Ask three clarification questions, one at a time, with 8 context-specific numbered suggestions each, to make sure you understand exactly what the user wants from this prompt. This might include asking whether there are any relevant documents to reference. If you're still not completely clear on what they want after three questions, keep asking one-at-a-time follow-up questions, with suggestions, until you are clear. Every question in this step must include numbered suggestions — never skip this. Let the user know each time that they can choose a suggestion, combine a few, or just write their own answer.
 
-Step 4 — Generate the complete C.R.A.F.T. prompt.
+Step 5 — Generate the complete C.R.A.F.T. prompt.
 After receiving the answers to the clarifying questions, generate a complete C.R.A.F.T. prompt for the topic the user described. The Action section of the prompt you generate must be a step-by-step, one-question-at-a-time instructional sequence in Q&A style, and it must include the following standard components, adapted to fit the specific topic:
 
 Voice mode note. Include a note, near the top of the generated prompt, that it works best when the end user types their answers or uses mic-to-text, rather than live voice conversation mode, since voice mode often loses track of longer instructions like this one.
@@ -1934,20 +1943,20 @@ Voice mode note. Include a note, near the top of the generated prompt, that it w
 Privacy check-in. Build in an early step where the assistant asks the end user, in plain language assuming no prior AI experience, whether privacy is a concern for this conversation. It should briefly explain that some things people share can feel sensitive, and walk through the options in plain terms if the user says it's a concern: a Temporary/Incognito Chat mode where nothing is saved but also can't be reopened later, versus a normal chat that stays in history and can be deleted later (though a deletion can't be undone), and a note that some AI tools have a memory feature that could carry details across conversations, worth checking if privacy matters. If the assistant is able to check the end user's own memory or history settings directly, it should do so; otherwise it should explain simply how they could check it themselves. This should always come before the mode question below and before the first real question about their situation.
 
 Mode question (if dual mode applies). If Step 2 determined this prompt should support two people, build in a question right after the privacy check-in that asks the end user, in plain language, whether they're working through this alone or together with someone else, with a couple of relevant examples for the topic. If it's one person, the rest of the generated prompt runs as normal, addressing that one person throughout. If it's two people, the generated prompt must include a full Two-Person Mode framework covering all of the following, adapted to the topic:
-- By default, ask each question as two separate, clearly labeled questions, one addressed to each person by name or as "Person A" / "Person B," and wait for both individual answers before moving on.
-- A question only needs to be asked once, to both people together, if it's genuinely one where you wouldn't expect any meaningful difference in their answers (e.g. a simple factual or logistical detail) — default to asking separately whenever there's a real chance their answers could differ.
-- Once both people have clearly gotten into the rhythm of answering separately (typically after the first several questions), the generated prompt may allow switching to asking a question once and inviting both people to respond together in the same message — but it must still always get and clearly capture a distinct response from each person, explicitly asking for the other person's answer if only one responds. Silence, or one person's answer, must never be assumed to speak for both.
-- Numbered suggestions still apply as normal in dual mode, and each person chooses from them or answers in their own words independently of the other.
-- After both people answer a question, the assistant should briefly and neutrally reflect back where their answers agree and where they differ, without judging either answer or steering them toward one.
-- Where answers differ meaningfully, that difference should be treated as something worth exploring gently, rather than something to resolve quickly.
-- When building any final output, it must reflect both people's input clearly, and where preferences genuinely conflict, offer options showing the different paths each preference would lead to, rather than silently picking one person's view over the other's.
-- The assistant should keep track of both people's answers as it goes, so later questions and the final output can refer back to earlier things each person said.
+By default, ask each question as two separate, clearly labeled questions, one addressed to each person by name or as "Person A" / "Person B," and wait for both individual answers before moving on.
+A question only needs to be asked once, to both people together, if it's genuinely one where you wouldn't expect any meaningful difference in their answers (e.g. a simple factual or logistical detail) — default to asking separately whenever there's a real chance their answers could differ.
+Once both people have clearly gotten into the rhythm of answering separately (typically after the first several questions), the generated prompt may allow switching to asking a question once and inviting both people to respond together in the same message — but it must still always get and clearly capture a distinct response from each person, explicitly asking for the other person's answer if only one responds. Silence, or one person's answer, must never be assumed to speak for both.
+Numbered suggestions still apply as normal in dual mode, and each person chooses from them or answers in their own words independently of the other.
+After both people answer a question, the assistant should briefly and neutrally reflect back where their answers agree and where they differ, without judging either answer or steering them toward one.
+Where answers differ meaningfully, that difference should be treated as something worth exploring gently, rather than something to resolve quickly.
+When building any final output, it must reflect both people's input clearly, and where preferences genuinely conflict, offer options showing the different paths each preference would lead to, rather than silently picking one person's view over the other's.
+The assistant should keep track of both people's answers as it goes, so later questions and the final output can refer back to earlier things each person said.
 
 Numbered suggestions, scaled and mandatory. Every question the generated prompt asks after the first, open-ended question must include numbered, topic-specific suggestions, with the count scaled to the question:
-- 3 to 5 suggestions for narrower questions with only a few common answers.
-- 5 to 8 suggestions as the default for most questions.
-- 8 to 10 suggestions for pivotal, wide-open, or emotionally significant questions where the range of possible answers is genuinely broad.
-- Suggestions can be skipped only for genuinely wide-open first/opening questions where a list wouldn't make sense (for example, "describe your situation in your own words").
+3 to 5 suggestions for narrower questions with only a few common answers.
+5 to 8 suggestions as the default for most questions.
+8 to 10 suggestions for pivotal, wide-open, or emotionally significant questions where the range of possible answers is genuinely broad.
+Suggestions can be skipped only for genuinely wide-open first/opening questions where a list wouldn't make sense (for example, "describe your situation in your own words").
 Build in an explicit, mandatory self-check as part of the generated prompt's own instructions: before sending any question that needs suggestions, the assistant running that prompt must check whether the question has its numbered suggestions attached, and add them before sending if not — this check applies to every question, including short, quick, or secondary follow-up questions, not just the main numbered steps, since those are exactly the ones most likely to get skipped. The generated prompt should also instruct that if a question was ever sent without required suggestions, the assistant should catch this, say so plainly, and supply the missing suggestions in its next message before treating the person's answer as final. Every time suggestions are given, the generated prompt must also remind the end user they can pick a number, combine a few, or write their own answer instead.
 
 Staying on task. Build in a rule that if, at any point, the end user asks the assistant running the generated prompt to do something unrelated to that prompt's specific job — for example, researching an outside topic, drafting an unrelated email or document, or any other task outside the process the prompt is designed to run — the assistant must not do it inside that conversation, not even in a brief or "just a quick answer" form. Instead, it should briefly acknowledge the request in a sentence, explain plainly that the conversation is set up specifically for this process and that unrelated tasks would pull it off track, and let the user know it's glad to help with that separately, in its own conversation, whenever they'd like. It should then return immediately to the exact question it was on before the interruption, without treating the interruption as an answer to the pending question. This should hold even for requests that feel small, quick, or loosely related to the topic. The only exception the generated prompt should carve out is if the end user explicitly says they want to stop or pause the process altogether to do something else, in which case that should be respected directly.
@@ -1955,6 +1964,8 @@ Staying on task. Build in a rule that if, at any point, the end user asks the as
 Orientation and progress tracking. If the process the prompt guides is likely to be time-consuming (more than a handful of questions, or spanning multiple stages/sections), build in: a short roadmap given early on, listing the stages or sections in order; a rough, honest time estimate based on the topic (and noting that two-person mode typically takes longer, if applicable); a way to track and announce progress as the end user moves through it (like "Section 2 of 5" or an occasional short progress marker); and an explicit note that the end user can pause and come back later, since this doesn't need to be finished in one sitting.
 
 7th-grade reading level. All content the generated prompt produces for the end user — questions, suggestions, explanations, and final outputs — must be written in clear, simple language, short sentences, and everyday words, suitable for a 7th-grade reading level.
+
+Transcript offer (if selected in Step 3). If Step 3 determined the process should offer a downloadable transcript, build in a step near the very end of the generated prompt, after the final output has been presented, where the assistant asks the end user in plain language whether they'd like a word-for-word transcript of the whole conversation as a downloadable document. If Step 3's answer was "always offer it," this question should be asked automatically as a standard closing step. If the answer was "only if the end user asks," the generated prompt should instead include a brief, low-key note that a full transcript can be provided as a downloadable document if wanted, without proactively asking. Either way, if the end user wants it, the assistant running the generated prompt should produce the complete, unedited transcript of the conversation as a downloadable document, not a summary or paraphrase.
 
 Take a moment internally to check the generated prompt for accuracy and completeness — especially that every one of the standard components above is actually present and correctly adapted to the topic — before finalizing it.
 
@@ -1965,7 +1976,7 @@ Context: Describe the situation and purpose for which the master prompt is neede
 
 Role: Define the assistant as an industry-leading expert with 20+ years of relevant experience, suited to the specific topic.
 
-Action: Provide the sequential, one-question-at-a-time Q&A flow the assistant will run with the end user, including all of the standard components above (voice-mode note, privacy check-in, mode question and two-person framework if applicable, scaled and mandatory numbered suggestions with the self-check instruction, staying-on-task rule, and orientation/progress tracking if the process is lengthy), adapted specifically to the topic.
+Action: Provide the sequential, one-question-at-a-time Q&A flow the assistant will run with the end user, including all of the standard components above (voice-mode note, privacy check-in, mode question and two-person framework if applicable, scaled and mandatory numbered suggestions with the self-check instruction, staying-on-task rule, orientation/progress tracking if the process is lengthy, and the transcript offer if selected), adapted specifically to the topic.
 
 Format: Specify how the assistant must present information — one question at a time, conversational and warm tone, numbered suggestions scaled per question, and all content written at a 7th-grade reading level.
 
@@ -1994,13 +2005,13 @@ Step 2 — Mode check. Ask whether this is being done by one team leader alone, 
 Step 3 — Roadmap. Give a short roadmap: this process covers defining what the team does, who it serves, and its impact, then drafting and refining a purpose statement, then doing the same for a vision statement. Let them know it typically takes 20 to 40 minutes solo, or 30 to 60 minutes for two people, and that they can pause and come back anytime.
 
 Two-Person Mode instructions (only used if two people are doing this together):
-- By default, ask each question as two separate, clearly labeled questions — one addressed to each person by name. Wait for both individual answers before moving on.
-- A question only needs to be asked once, to both together, if it's genuinely one where you wouldn't expect their answers to differ (e.g. how long the team has existed).
-- Once both people have the rhythm of answering separately (typically after the first few questions), you may ask a question once and invite both to respond in the same message — but you must still always get a distinct, separate answer from each person, and explicitly ask again if only one responds. Never let silence, or one answer, stand in for both.
-- Numbered suggestions still apply as normal; each person chooses independently.
-- After both answer, briefly and neutrally reflect back where they agree and where they differ, without judging or steering either person.
-- Where answers differ meaningfully, treat that as worth exploring gently rather than rushing to resolve.
-- When drafting the purpose and vision statements, reflect both people's input clearly, and where their preferences genuinely conflict, offer options showing the different directions each would lead, rather than silently picking one person's view.
+By default, ask each question as two separate, clearly labeled questions — one addressed to each person by name. Wait for both individual answers before moving on.
+A question only needs to be asked once, to both together, if it's genuinely one where you wouldn't expect their answers to differ (e.g. how long the team has existed).
+Once both people have the rhythm of answering separately (typically after the first few questions), you may ask a question once and invite both to respond in the same message — but you must still always get a distinct, separate answer from each person, and explicitly ask again if only one responds. Never let silence, or one answer, stand in for both.
+Numbered suggestions still apply as normal; each person chooses independently.
+After both answer, briefly and neutrally reflect back where they agree and where they differ, without judging or steering either person.
+Where answers differ meaningfully, treat that as worth exploring gently rather than rushing to resolve.
+When drafting the purpose and vision statements, reflect both people's input clearly, and where their preferences genuinely conflict, offer options showing the different directions each would lead, rather than silently picking one person's view.
 
 Step 4 — Ask the following, one at a time. (In Two-Person Mode, follow the Two-Person Mode instructions above for each.)
 
@@ -2031,7 +2042,7 @@ This prompt is designed to be run by AI to guide one team leader, or two working
 
 — End example —
 
-Please create the C.R.A.F.T. prompt following all instructions above. Take a moment internally to ensure clarity and quality — and that every standard component (privacy, mode/dual-mode, scaled and self-checked suggestions, staying on task, and orientation if needed) is genuinely present and adapted to the topic — before producing your final answer.</div>
+Please create the C.R.A.F.T. prompt following all instructions above. Take a moment internally to ensure clarity and quality — and that every standard component (privacy, mode/dual-mode, scaled and self-checked suggestions, staying on task, orientation if needed, and the transcript offer if selected) is genuinely present and adapted to the topic — before producing your final answer.</div>
       </div>
     </details>
 
